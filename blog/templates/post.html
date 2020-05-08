@@ -1,0 +1,10 @@
+{% extends 'single-template.html' %}
+
+{% block title %}MYSITE: {{ post.title }}{% endblock %}
+{% block entry %}
+
+    <h2>{{ post.title }}</h2>
+    <div>
+        {{ post.content | linebreaks }}
+    </div>
+{% endblock %}

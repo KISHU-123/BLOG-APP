@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}BEAUTIFUL PLACES{% endblock %}</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><br/>MY SITE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+        <li class="active"> <a  href="/">Home<br/></a></li>
+        <li><a  href="#">Random Posts </a></li>
+        <li><a  href="#">My Profile </a></li>
+        <li><a href="#">Settings </a></li>
+         <li><a href="about/">About </a></li>
+
+
+    </ul>
+  </div>
+</nav>
+
+    <div id="content">
+        {% block content %}
+            This is a fall back text
+        {% endblock %}
+    </div>
+</body>
+</html>
